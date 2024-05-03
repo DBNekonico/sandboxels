@@ -67,7 +67,7 @@ elements.SCP_008 = {
         "light": { elem1: [null,null,null,null,"anomalous_essence"] , chance:0.01 },
     },
     tempHigh: 1000,
-    stateHigh: [null,null,null,null,"anomalous_essence"],
+    stateHigh: [null,null,null,null,null,"anomalous_essence"],
     tempLow: -100,
     stateLow: "frozen_008",
     category: "scp",
@@ -425,7 +425,7 @@ elements.plague_doctor = {
             pixel.element = "doc_head";
         }
         else if (isEmpty(pixel.x, pixel.y-1)) {
-            createPixel("head", pixel.x, pixel.y-1);
+            createPixel("doc_head", pixel.x, pixel.y-1);
             pixelMap[pixel.x][pixel.y-1].color = pixel.color;
             pixel.element = "doc_body";
             pixel.color = pixelColorPick(pixel);
